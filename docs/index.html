@@ -21,30 +21,23 @@
 </div>
 <div id="contact_card" class="card">
 	<section class="tab" style="min-height: 55px;">
-		<div id="smaatoad" style="padding:0px"></div>
-		<!-- <script type="text/javascript" src="http://soma-assets.smaato.net/js/smaatoAdTag.js"></script> -->
+		<div id="smt-130257799" style="padding: 0px"></div>
+		<!-- <script type="text/javascript" src="https://soma-assets.smaato.net/js/smaatoAdTag.js"></script> -->
 		<script type="text/javascript" src="js/smaatoAdTag.js"></script>
 		<script>
-			function myJSCallBack(status) {
-				if (status == "SUCCESS") {
-					// TODO Handle ad available (Option)
-					window.alert('GOOD');
-				} else if (status == "ERROR") {
-					// TODO Handle not ad available
-					window.alert('BAD');
+			function callBackForSmaato(status){
+				if(status == "SUCCESS"){
+					console.log("callBack is being called with status : " + status);
+				} else if (status == "ERROR"){
+					console.log("callBack is being called with status : " + status);
 				}
-			};
+			}; 
 			SomaJS.loadAd({
-				adDivId: "smaatoad",
+				adDivId : "smt-130257799",
 				publisherId: 1100032248,
 				adSpaceId: 130257799,
-				autoReload: 240,
-				dimension: "xxlarge",
-				dimensionstrict: true,
-				keywords: "cars,shopping",
-				gender: "m",
-				age: 27
-			}, myJSCallBack);
+				format: "all",formatstrict: true,dimension: "xxlarge",width: 320,height: 50,
+			sync: false,},callBackForSmaato);
 		</script>
 	</section>
 </div>
