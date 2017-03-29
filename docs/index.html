@@ -22,16 +22,15 @@
 <div id="contact_card" class="card">
 	<section class="tab" style="min-height: 55px;">
 		<div id="smaatoad" style="padding:0px"></div>
-		<!-- <script type="text/javascript" src="http://soma-assets.smaato.net/js/smaatoAdTag.js"></script> -->
-		<script type="text/javascript" src="js/smaatoAdTag.js"></script>
+		<script type="text/javascript" src="http://soma-assets.smaato.net/js/smaatoAdTag.js"></script>
 		<script>
 			function myJSCallBack(status) {
 				if (status == "SUCCESS") {
 					// TODO Handle ad available (Option)
-					window.alert("SUCCESS!");
+					window.alert('GOOD');
 				} else if (status == "ERROR") {
 					// TODO Handle not ad available
-					window.alert("FAIL!");
+					window.alert('BAD');
 				}
 			};
 			SomaJS.loadAd({
@@ -41,6 +40,9 @@
 				autoReload: 240,
 				dimension: "xxlarge",
 				dimensionstrict: true,
+				keywords: "cars,shopping",
+				gender: "m",
+				age: 27
 			}, myJSCallBack);
 		</script>
 	</section>
